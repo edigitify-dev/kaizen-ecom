@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -20,7 +20,9 @@ export default function MovementSection() {
   const can3D = useCan3D();
   const [wrap, inView] = useInView<HTMLDivElement>("500px");
 
-  useEffect(() => {
+  // ScrollTrigger pinning wraps and reparents this section in the DOM. Revert
+  // that structure during the layout cleanup, before React removes the route.
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     if (prefersReducedMotion()) {
       progress.current = 1;

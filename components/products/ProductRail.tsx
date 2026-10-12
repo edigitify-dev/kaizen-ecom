@@ -14,7 +14,7 @@ export default function ProductRail() {
           <Link href="/shop" className="group flex items-center gap-3 text-[11px] uppercase tracking-wider2">View all <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></Link>
         </Reveal>
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-4 lg:gap-x-6">
-          {products.map((p, i) => <Reveal key={p.slug} delay={i * 0.08}><ProductCard product={p} /></Reveal>)}
+          {products.slice(0, 4).map((p, i) => <Reveal key={p.slug} delay={i * 0.08}><ProductCard product={p} /></Reveal>)}
         </div>
       </div>
     </section>

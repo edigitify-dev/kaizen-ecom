@@ -43,13 +43,17 @@ export default function HeroSection() {
       if (window.innerWidth < 768) {
         gsap.set(subject.current, { x: 0 });
       } else {
-        tl.to(subject.current, { x: 0, duration: 1.1, ease: "power3.inOut" }, 0);
+        tl.to(
+          subject.current,
+          { x: 0, duration: 1.1, ease: "power3.inOut" },
+          0,
+        );
       }
       tl.to(
-          ".hero-ribbons",
-          { opacity: 1, filter: "blur(0px)", duration: 1.25 },
-          0.65,
-        )
+        ".hero-ribbons",
+        { opacity: 1, filter: "blur(0px)", duration: 1.25 },
+        0.65,
+      )
         .to(
           ".h-line > span",
           {
@@ -120,10 +124,7 @@ export default function HeroSection() {
         className="h-depth pointer-events-none absolute -inset-6 z-[3]"
         aria-hidden="true"
       >
-        <div
-          ref={subject}
-          className="hero-subject absolute inset-0"
-        >
+        <div ref={subject} className="hero-subject absolute inset-0">
           <Image
             src="/images/hero-model.png"
             alt=""
@@ -138,7 +139,7 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 pb-[clamp(6.5rem,13vh,10rem)] md:px-24 translate-y-16">
         {/* <p className="h-fade label text-ivory/80">New season / 2026</p> */}
         <h1
-          className="headline mt-5 text-[clamp(3.6rem,12vw,10rem)]"
+          className="headline mt-5 text-[clamp(6rem,12vw,10rem)]"
           aria-label="Not made to blend."
         >
           {["NOT", "MADE", "TO BLEND."].map((l) => (

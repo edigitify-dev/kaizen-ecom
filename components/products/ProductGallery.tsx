@@ -8,7 +8,7 @@ import { formatINR, type Product } from "@/lib/data";
 export default function ProductGallery({ product }: { product: Product }) {
   const { add } = useApp();
   const [size, setSize] = useState("M"); const [color, setColor] = useState(product.colors[0].name); const [view, setView] = useState(0); const [added, setAdded] = useState(false);
-  const imgs = [product.img, product.imgAlt];
+  const imgs = Array.from(new Set([product.img, product.imgAlt]));
   return (
     <div className="mx-auto grid max-w-[1400px] gap-10 px-5 pb-24 pt-28 md:grid-cols-2 md:px-10 md:pt-32">
       <div>
