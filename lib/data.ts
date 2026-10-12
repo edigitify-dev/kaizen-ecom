@@ -105,7 +105,6 @@ export const formatINR = (n: number) =>
 
 export const navLinks = [
   { label: "Shop", href: "/shop" },
-  { label: "Collections", href: "/#collections" },
-  { label: "About", href: "/#story" },
+  { label: "About", href: "/about" },
   { label: "Journal", href: "/#journal" },
 ];

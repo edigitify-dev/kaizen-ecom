@@ -6,7 +6,7 @@ import { subscribe } from "@/lib/newsletter";
 
 const cols = [
   { h: "Shop", l: [["New arrivals", "/shop"], ["The Minimalist", "/collections/the-minimalist"], ["The After Hours", "/collections/the-after-hours"], ["The Unconventional", "/collections/the-unconventional"]] },
-  { h: "Company", l: [["About", "/#story"], ["Our process", "/#story"], ["Journal", "/#journal"]] },
+  { h: "Company", l: [["About", "/about"], ["Our process", "/about#values"], ["Journal", "/#journal"]] },
   { h: "Help", l: [["Size guide", "/legal/size-guide"], ["Shipping", "/legal/shipping"], ["Returns", "/legal/returns"], ["FAQ", "/legal/faq"]] },
 ];
 
