@@ -56,7 +56,7 @@ export default function Footer() {
         <p>&copy; 2026 KAIZEN. Demo storefront.</p>
         <p className="sm:text-center">
           Powered by{" "}
-          <a href="https://edigitify.com" target="_blank" rel="noopener noreferrer" className="text-ivory transition-colors hover:text-silver">
+          <a href="https://www.edigitify.in/" target="_blank" rel="noopener noreferrer" className="text-ivory transition-colors hover:text-silver">
             eDigitify
           </a>
         </p>
