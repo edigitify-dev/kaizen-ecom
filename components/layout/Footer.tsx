@@ -52,9 +52,15 @@ export default function Footer() {
         </div>
         <div className="md:col-span-4"><Newsletter /></div>
       </div>
-      <div className="mx-auto mt-16 flex max-w-[1600px] flex-col justify-between gap-3 border-t border-ivory/10 pt-6 text-xs text-muted sm:flex-row">
+      <div className="mx-auto mt-16 flex max-w-[1600px] flex-col gap-3 border-t border-ivory/10 pt-6 text-xs text-muted sm:grid sm:grid-cols-3 sm:items-center">
         <p>&copy; 2026 KAIZEN. Demo storefront.</p>
-        <p className="flex gap-6"><Link href="/legal/privacy" className="hover:text-ivory">Privacy policy</Link><Link href="/legal/terms" className="hover:text-ivory">Terms</Link></p>
+        <p className="sm:text-center">
+          Powered by{" "}
+          <a href="https://edigitify.com" target="_blank" rel="noopener noreferrer" className="text-ivory transition-colors hover:text-silver">
+            eDigitify
+          </a>
+        </p>
+        <p className="flex gap-6 sm:justify-end"><Link href="/legal/privacy" className="hover:text-ivory">Privacy policy</Link><Link href="/legal/terms" className="hover:text-ivory">Terms</Link></p>
       </div>
     </footer>
   );
